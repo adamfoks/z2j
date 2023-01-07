@@ -1,7 +1,25 @@
-body {
-    background-color: goldenrod;
+.container {
+    display: grid;    
 }
 
-h1 {
+a:hover {
     color: red;
+}
+
+header {
+    background-color: lightpink;
+}
+
+nav {
+    background-color: lightgrey;
+    padding: 10px 0;
+}
+
+main {
+    background-color: aqua;
+}
+
+main + footer {
+    background-color: orange;
+    padding: 5px 0;
 }

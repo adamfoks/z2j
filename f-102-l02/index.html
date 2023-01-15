@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,28 @@
     <title>Zero to junior</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    Zero to Junior
+
+<body class="blue" id="blue">
+    <h1>Zero to Junior</h1>
+    <button class="light" id="button">
+        Backround color button
+    </button>
+
+    <p>Click in any input, then hit the tab key.</p>
+    <ol>
+      <li><input tabindex="1" value="3"></li>
+      <li><input tabindex="2" value="6"></li>
+      <li><input tabindex="3" value="2"></li>
+      <li><input tabindex="4" value="0"></li>
+      <li><input tabindex="5" value="0"></li>
+    </ol>
+
+    <script>
+        const background = document.getElementById("button");
+        background.addEventListener("click", function () {
+            document.body.classList.toggle("yellow");
+        });
+    </script>
 </body>
+
 </html>

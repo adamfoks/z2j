@@ -1,30 +1,26 @@
-.blue {
-    background-color: blue;
-}    
-
-.yellow {
-    background-color: yellow;
+* {
+  margin: 0;
 }
 
-.my-button {
-    display: inline-block;
-    padding: 1rem 2rem;
-    text-decoration: none;
-    background: pink;
-    font: inherit;
-    text-align: center;
-  }
+body {
+  background-color: #8bc34a;
+  margin: 10px;
+}
 
-  .my-element {
-    width: 250px;
-    height: 250px;
-    background: linear-gradient(#778ca3, #4b6584);
-    border: 5px solid;
-    border-top-color: lightsteelblue;
-    border-right-color: lightsteelblue;
-    border-bottom-color: lightslategray;
-    border-left-color: slategray;
-    box-shadow: 0px 0px 20px rgb(0 0 0 / 30%);
-    border-radius: 60px;
-    transform: rotate(120deg);
-  }
+.photo-container {
+  display: inline-block;
+  background-color: #b97a5c;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: 0.5rem solid #a52a2a;
+}
+
+.img-title {
+  font-size: large;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.edit-text {
+  width: 320px;
+}

@@ -11,41 +11,41 @@
 <body>
     <script>
 
-        const num1 = parseFloat(prompt('Podaj pierwszą liczbę:'));
-        const operator = prompt('Podaj operator arytmetyczny (+, -, *, /, %):');
-        const num2 = parseFloat(prompt('Podaj druga liczbę:'));
-
-        if (isNaN(num1) || isNaN(num2)) {
-            alert("Proszę wprowadzić liczbę!");
-        } else {
-
-            if (operator === "+") {
-
-                let result;
-
-                result = num1 + num2;
-                alert(result);
-            } else if (operator === "-") {
-                result = num1 - num2;
-                alert(result);
-            } else if (operator === "*") {
-                result = num1 * num2;
-                alert(result);
-            } else if (operator === "/") {
-
-                if (num2 == 0) {
-                    result = alert("Nie można dzielić przez zero!");
-                } else {
-                    result = num1 / num2;
-                    alert(result);
-                }
-            } else if (operator === "%") {
-                result = num1 % num2;
-                alert(result);
-            } else {
-                alert('Wprowadz właściwe dane!');
-            }
-        };
+         const num1 = parseFloat(prompt('Podaj pierwszą liczbę:'));
+         const operator = prompt('Podaj operator arytmetyczny (+, -, *, /, %):');
+         const num2 = parseFloat(prompt('Podaj druga liczbę:'));
+ 
+         if (isNaN(num1) || isNaN(num2)) {
+             alert("Proszę wprowadzić liczbę!");
+         } else {
+ 
+             if (operator === "+") {
+ 
+                 let result;
+ 
+                 result = num1 + num2;
+                 alert(result);
+             } else if (operator === "-") {
+                 result = num1 - num2;
+                 alert(result);
+             } else if (operator === "*") {
+                 result = num1 * num2;
+                 alert(result);
+             } else if (operator === "/") {
+ 
+                 if (num2 == 0) {
+                     result = alert("Nie można dzielić przez zero!");
+                 } else {
+                     result = num1 / num2;
+                     alert(result);
+                 }
+             } else if (operator === "%") {
+                 result = num1 % num2;
+                 alert(result);
+             } else {
+                 alert('Wprowadz właściwe dane!');
+             }
+         };
 
 
 
@@ -53,39 +53,75 @@
 
         // Metoda: switch z chat gpt
 
-       /*  
-        // Pobieranie wartości dwóch zmiennych liczbowych od użytkownika
-        var num1 = parseFloat(prompt("Wprowadź pierwszą liczbę:"));
-        var num2 = parseFloat(prompt("Wprowadź drugą liczbę:"));
-        
-        // Pobieranie operatora arytmetycznego od użytkownika
-        var operator = prompt("Wybierz operator arytmetyczny (+, -, *, /):");
-        
-        // Obliczanie wyniku na podstawie wybranego operatora
-        var result;
-        switch (operator) {
-          case "+":
-            result = num1 + num2;
-            break;
-          case "-":
-            result = num1 - num2;
-            break;
-          case "*":
-            result = num1 * num2;
-            break;
-          case "/":
-            result = num1 / num2;
-            break;
-          default:
-            alert("Nieprawidłowy operator!");
-        }
-        
-        // Wyświetlanie wyniku
-        if (result !== undefined) {
-          alert("Wynik: " + result);
+        /*  
+         // Pobieranie wartości dwóch zmiennych liczbowych od użytkownika
+         var num1 = parseFloat(prompt("Wprowadź pierwszą liczbę:"));
+         var num2 = parseFloat(prompt("Wprowadź drugą liczbę:"));
+         
+         // Pobieranie operatora arytmetycznego od użytkownika
+         var operator = prompt("Wybierz operator arytmetyczny (+, -, *, /):");
+         
+         // Obliczanie wyniku na podstawie wybranego operatora
+         var result;
+         switch (operator) {
+           case "+":
+             result = num1 + num2;
+             break;
+           case "-":
+             result = num1 - num2;
+             break;
+           case "*":
+             result = num1 * num2;
+             break;
+           case "/":
+             result = num1 / num2;
+             break;
+           default:
+             alert("Nieprawidłowy operator!");
+         }
+         
+         // Wyświetlanie wyniku
+         if (result !== undefined) {
+           alert("Wynik: " + result);
+         } */
+
+
+
+
+        //  Pętla blokująca przeglądarkę:
+
+        /*  while (true) {
+             console.log("lol");
+         }; */
+
+
+
+        // ciągi liczbowe
+
+        /* let i = 3;
+        while (i <= 10) {
+            console.log(i);
+            i += 3;
+        }; */
+
+
+        /*  let i = 0;
+         while (i < 100) {
+             console.log(i);
+             i += 2;
+         } */
+
+       /*  let i = 0;
+        while (i < 100) {
+            console.log(i);
+            i += 7;
         } */
-        
-        
+
+        /* let i = 13;
+        while (i < 1000) {
+            console.log(i);
+            i *= 3;
+        } */
 
 
 

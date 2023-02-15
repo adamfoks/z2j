@@ -2,191 +2,153 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>z2j f-102 egzamin</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>z2j f-102 egzamin</title>
 </head>
 
 <body>
 
 
 
-    <script>
+  <script>
 
-        /* const num1 = parseFloat(prompt('Podaj pierwszą liczbę:'));
-        const operator = prompt('Podaj operator arytmetyczny (+, -, *, /, %):');
-        const num2 = parseFloat(prompt('Podaj druga liczbę:'));
-        
-        if (isNaN(num1) || isNaN(num2)) {
-            alert("Proszę wprowadzić liczbę!");
-        } else {
-        
-            if (operator === "+") {
-        
-                let result;
-        
-                result = num1 + num2;
-                alert(result);
-            } else if (operator === "-") {
-                result = num1 - num2;
-                alert(result);
-            } else if (operator === "*") {
-                result = num1 * num2;
-                alert(result);
-            } else if (operator === "/") {
-        
-                if (num2 == 0) {
-                    result = alert("Nie można dzielić przez zero!");
-                } else {
-                    result = num1 / num2;
-                    alert(result);
-                }
-            } else if (operator === "%") {
-                result = num1 % num2;
-                alert(result);
-            } else {
-                alert('Wprowadz właściwe dane!');
-            }
-        };
-         */
+    /* const num1 = parseFloat(prompt('Podaj pierwszą liczbę:'));
+    const operator = prompt('Podaj operator arytmetyczny (+, -, *, /, %):');
+    const num2 = parseFloat(prompt('Podaj druga liczbę:'));
 
-
-
-        /* const num1 = parseFloat(prompt('Podaj pierwszą liczbę:'));
-        const operator = prompt('Podaj operator arytmetyczny (+, -, *, /, %):');
-        const num2 = parseFloat(prompt('Podaj druga liczbę:'));
-
-        function sum(num1, num2) {
-            if (operator === "+") {
-                alert(num1 + num2);
-            }
-        };
-
-        sum(num1, num2);
-
-
-        function sub(num1, num2) {
-            if (operator === "-") {
-                alert(num1 - num2);
-            }
-        };
-
-        sub(num1, num2);
-
-
-        function multi(num1, num2) {
-            if (operator === "*") {
-                alert(num1 * num2);
-            }
-        };
-
-        multi(num1, num2);
-
-
-        function divi(num1, num2) {
-            if (operator === "/") {
-                if (num2 == 0) {
-                    result = alert("Nie można dzielić przez zero!");
-                } else {
-                    alert(num1 / num2);
-                }
-            }
-        };
-
-        divi(num1, num2);
-
-
-        function modulo(num1, num2) {
-            if (operator === "%") {
-                alert(num1 % num2);
-            }
-        };
-
-        modulo(num1, num2);
- */
-
-
-
- let result = 0;
-
-function add(x, y) {
-  return x + y;
-}
-
-function subtract(x, y) {
-  return x - y;
-}
-
-function multiply(x, y) {
-  return x * y;
-}
-
-function divide(x, y) {
-  if (y === 0) {
-    alert("Nie można dzielić przez zero!");
-    return NaN;
-  } else {
-    return x / y;
-  }
-}
-
-function modulo(x, y) {
-  return x % y;
-}
-
-function calculator() {
-  let operator;
-  do {
-    operator = prompt("Podaj operator matematyczny (+, -, *, /, %):");
-    if (operator === null || operator === "") {
-      break;
-    } else if (operator !== "+" && operator !== "-" && operator !== "*" && operator !== "/" && operator !== "%") {
-      alert("Nieprawidłowy operator matematyczny!");
-      continue;
+    function dodaj(a, b) {
+      return a + b;
     }
-    let number = prompt("Podaj liczbę:");
-    if (isNaN(number)) {
-      alert("To nie jest liczba!");
-      continue;
+
+    function odejmij(a, b) {
+      return a - b;
     }
-    if (result === 0) {
-      result = Number(number);
-    } else {
+
+    function pomnoz(a, b) {
+      return a * b;
+    }
+
+    function podziel(a, b) {
+      if (b === 0) {
+        alert ("Nie można dzielić przez zero!")
+      } else {
+      return a / b;
+    }
+
+    function modulo(a, b) {
+      return a % b;
+    }
+ 
+         if (isNaN(num1) || isNaN(num2)) {
+             alert("Proszę wprowadzić liczbę!");
+         } else {
+ 
+             if (operator === "+") {
+ 
+                 let result;
+ 
+                 result = dodaj(num1 + num2);
+                 alert(result);
+             } else if (operator === "-") {
+                 result = odejmij(num1 - num2);
+                 alert(result);
+             } else if (operator === "*") {
+                 result = pomnoz(num1 * num2);
+                 alert(result);
+             } else if (operator === "/") {
+ 
+                 if (num2 == 0) {
+                     result = alert("Nie można dzielić przez zero!");
+                 } else {
+                     result = podziel(num1 / num2);
+                     alert(result);
+                 }
+             } else if (operator === "%") {
+                 result = modulo(num1 % num2);
+                 alert(result);
+             } else {
+                 alert('Wprowadz właściwe dane!');
+             }
+         }; */
+
+    function dodawanie(a, b) {
+      return a + b;
+    }
+
+    function odejmowanie(a, b) {
+      return a - b;
+    }
+
+    function mnożenie(a, b) {
+      return a * b;
+    }
+
+    function dzielenie(a, b) {
+      return a / b;
+    }
+
+    function modulo(a, b) {
+      return a % b;
+    }
+
+    function nextOperation() {
+      operator = prompt(`Wynik: ${numA} - Podaj operator arytmetyczny (+, -, *, /, %):`);
+    }
+
+    let numA = +prompt("Podaj pierwszą liczbę:", "");
+    let operator = prompt("Podaj operator arytmetyczny (+, -, *, /, %):", "");
+
+    while (
+      operator == "+" ||
+      operator == "-" ||
+      operator == "*" ||
+      operator == "/" ||
+      operator == "%"
+    ) {
       switch (operator) {
         case "+":
-          result = add(result, Number(number));
+          numB = +prompt("Podaj kolejną liczbę:", "");
+          numA = dodawanie(numA, numB);
+          nextOperation();
           break;
+
         case "-":
-          result = subtract(result, Number(number));
+          numB = +prompt("Podaj kolejną liczbę:", "");
+          numA = odejmowanie(numA, numB);
+          nextOperation();
           break;
+
         case "*":
-          result = multiply(result, Number(number));
+          numB = +prompt("Podaj kolejną liczbę:", "");
+          numA = mnożenie(numA, numB);
+          nextOperation();
           break;
+
         case "/":
-          result = divide(result, Number(number));
+          numB = +prompt("Podaj kolejną liczbę:", "");
+          if (numB == 0) {
+            numB = alert("nie dzielimy przez 0! podaj nową liczbę");
+          } else {
+            numA = dzielenie(numA, numB);
+            nextOperation();
+          }
           break;
+
         case "%":
-          result = modulo(result, Number(number));
+          numB = +prompt("Podaj kolejną liczbę:", "");
+          numA = modulo(numA, numB);
+          nextOperation();
           break;
-        default:
-          break;
+
       }
     }
-    alert(`Aktualny wynik: ${result}`);
-  } while (operator !== "");
-}
-
-calculator();
 
 
+  </script>
 
-
-
-
-    </script>
-
-    <!-- <script src="calculator.js"></script> -->
+  <!-- <script src="calculator.js"></script> -->
 </body>
 
 </html>

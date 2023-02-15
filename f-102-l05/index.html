@@ -10,68 +10,10 @@
 
 <body>
 
-
+  <h1>Kalkulator</h1>
 
   <script>
 
-    /* const num1 = parseFloat(prompt('Podaj pierwszą liczbę:'));
-    const operator = prompt('Podaj operator arytmetyczny (+, -, *, /, %):');
-    const num2 = parseFloat(prompt('Podaj druga liczbę:'));
-
-    function dodaj(a, b) {
-      return a + b;
-    }
-
-    function odejmij(a, b) {
-      return a - b;
-    }
-
-    function pomnoz(a, b) {
-      return a * b;
-    }
-
-    function podziel(a, b) {
-      if (b === 0) {
-        alert ("Nie można dzielić przez zero!")
-      } else {
-      return a / b;
-    }
-
-    function modulo(a, b) {
-      return a % b;
-    }
- 
-         if (isNaN(num1) || isNaN(num2)) {
-             alert("Proszę wprowadzić liczbę!");
-         } else {
- 
-             if (operator === "+") {
- 
-                 let result;
- 
-                 result = dodaj(num1 + num2);
-                 alert(result);
-             } else if (operator === "-") {
-                 result = odejmij(num1 - num2);
-                 alert(result);
-             } else if (operator === "*") {
-                 result = pomnoz(num1 * num2);
-                 alert(result);
-             } else if (operator === "/") {
- 
-                 if (num2 == 0) {
-                     result = alert("Nie można dzielić przez zero!");
-                 } else {
-                     result = podziel(num1 / num2);
-                     alert(result);
-                 }
-             } else if (operator === "%") {
-                 result = modulo(num1 % num2);
-                 alert(result);
-             } else {
-                 alert('Wprowadz właściwe dane!');
-             }
-         }; */
 
     function dodawanie(a, b) {
       return a + b;
@@ -86,19 +28,24 @@
     }
 
     function dzielenie(a, b) {
-      return a / b;
+      if (b === 0) {
+        alert("Nie można dzielić przez zero!")
+      } else {
+        return a / b;
+      }
     }
 
     function modulo(a, b) {
       return a % b;
     }
 
-    function nextOperation() {
-      operator = prompt(`Wynik: ${numA} - Podaj operator arytmetyczny (+, -, *, /, %):`);
+    function nastepnyOperator() {
+      operator = prompt(`Wynik: ${numA} \nPodaj kolejny operator arytmetyczny (+, -, *, /, %):`);
     }
 
     let numA = +prompt("Podaj pierwszą liczbę:", "");
     let operator = prompt("Podaj operator arytmetyczny (+, -, *, /, %):", "");
+    let numB;
 
     while (
       operator == "+" ||
@@ -110,38 +57,57 @@
       switch (operator) {
         case "+":
           numB = +prompt("Podaj kolejną liczbę:", "");
+          if (isNaN(numB)) {
+            alert("Wprowadzona wartość nie jest liczbą!");
+            break;
+          }
           numA = dodawanie(numA, numB);
-          nextOperation();
+          nastepnyOperator();
           break;
 
         case "-":
           numB = +prompt("Podaj kolejną liczbę:", "");
+          if (isNaN(numB)) {
+            alert("Wprowadzona wartość nie jest liczbą!");
+            break;
+          }
           numA = odejmowanie(numA, numB);
-          nextOperation();
+          nastepnyOperator();
           break;
 
         case "*":
           numB = +prompt("Podaj kolejną liczbę:", "");
+          if (isNaN(numB)) {
+            alert("Wprowadzona wartość nie jest liczbą!");
+            break;
+          }
           numA = mnożenie(numA, numB);
-          nextOperation();
+          nastepnyOperator();
           break;
 
         case "/":
           numB = +prompt("Podaj kolejną liczbę:", "");
-          if (numB == 0) {
-            numB = alert("nie dzielimy przez 0! podaj nową liczbę");
-          } else {
-            numA = dzielenie(numA, numB);
-            nextOperation();
+          if (isNaN(numB)) {
+            alert("Wprowadzona wartość nie jest liczbą!");
+            break;
           }
+          numA = dzielenie(numA, numB);
+          nastepnyOperator();
           break;
 
         case "%":
           numB = +prompt("Podaj kolejną liczbę:", "");
+          if (isNaN(numB)) {
+            alert("Wprowadzona wartość nie jest liczbą!");
+            break;
+          }
           numA = modulo(numA, numB);
-          nextOperation();
+          nastepnyOperator();
           break;
 
+        default:
+          alert("Nieznany operator!");
+          operator = prompt("Podaj operator arytmetyczny (+, -, *, /, %):", "");
       }
     }
 

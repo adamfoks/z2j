@@ -1,51 +1,99 @@
-/* const num1 = parseFloat(prompt('Podaj pierwszą liczbę:'));
-const operator = prompt('Podaj operator arytmetyczny (+, -, *, /, %):');
-const num2 = parseFloat(prompt('Podaj druga liczbę:'));
+function dodawanie(a, b) {
+    return a + b;
+  }
 
-if (isNaN(num1) || isNaN(num2)) {
-    alert("Proszę wprowadzić liczbę!");
-} else {
+  function odejmowanie(a, b) {
+    return a - b;
+  }
 
-    if (operator === "+") {
+  function mnożenie(a, b) {
+    return a * b;
+  }
 
-        let result;
-
-        result = num1 + num2;
-        alert(result);
-    } else if (operator === "-") {
-        result = num1 - num2;
-        alert(result);
-    } else if (operator === "*") {
-        result = num1 * num2;
-        alert(result);
-    } else if (operator === "/") {
-
-        if (num2 == 0) {
-            result = alert("Nie można dzielić przez zero!");
-        } else {
-            result = num1 / num2;
-            alert(result);
-        }
-    } else if (operator === "%") {
-        result = num1 % num2;
-        alert(result);
+  function dzielenie(a, b) {
+    if (b === 0) {
+      alert("Nie można dzielić przez zero!")
     } else {
-        alert('Wprowadz właściwe dane!');
+      return a / b;
     }
-};
- */
+  }
 
+  function modulo(a, b) {
+    return a % b;
+  }
 
+  function nastepnyOperator() {
+    operator = prompt(`Wynik: ${numA} \nPodaj kolejny operator arytmetyczny (+, -, *, /, %):`);
+  }
 
-const num1 = parseFloat(prompt('Podaj pierwszą liczbę:'));
-const operator = prompt('Podaj operator arytmetyczny (+, -, *, /, %):');
-const num2 = parseFloat(prompt('Podaj druga liczbę:'));
-
-if (isNaN(num1) || isNaN(num2)) {
-    alert("Proszę wprowadzić liczbę!");
-} else {
-    function sum(num1, num2) {
-        alert (num1 + num2);
+  let numA = +prompt("Podaj pierwszą liczbę:", "");
+    if (isNaN(numA)) {
+      alert("Wprowadzona wartość nie jest liczbą!");
     }
-    sum(num1, num2);
-}
+
+  let operator = prompt("Podaj operator arytmetyczny (+, -, *, /, %):", "");
+  let numB;
+
+  while (
+    operator == "+" ||
+    operator == "-" ||
+    operator == "*" ||
+    operator == "/" ||
+    operator == "%"
+  ) {
+    switch (operator) {
+      case "+":
+        numB = +prompt("Podaj kolejną liczbę:", "");
+        if (isNaN(numB)) {
+          alert("Wprowadzona wartość nie jest liczbą!");
+          break;
+        }
+        numA = dodawanie(numA, numB);
+        nastepnyOperator();
+        break;
+
+      case "-":
+        numB = +prompt("Podaj kolejną liczbę:", "");
+        if (isNaN(numB)) {
+          alert("Wprowadzona wartość nie jest liczbą!");
+          break;
+        }
+        numA = odejmowanie(numA, numB);
+        nastepnyOperator();
+        break;
+
+      case "*":
+        numB = +prompt("Podaj kolejną liczbę:", "");
+        if (isNaN(numB)) {
+          alert("Wprowadzona wartość nie jest liczbą!");
+          break;
+        }
+        numA = mnożenie(numA, numB);
+        nastepnyOperator();
+        break;
+
+      case "/":
+        numB = +prompt("Podaj kolejną liczbę:", "");
+        if (isNaN(numB)) {
+          alert("Wprowadzona wartość nie jest liczbą!");
+          break;
+        }
+        numA = dzielenie(numA, numB);
+        nastepnyOperator();
+        break;
+
+      case "%":
+        numB = +prompt("Podaj kolejną liczbę:", "");
+        if (isNaN(numB)) {
+          alert("Wprowadzona wartość nie jest liczbą!");
+          break;
+        }
+        numA = modulo(numA, numB);
+        nastepnyOperator();
+        break;
+
+      default:
+        alert("Nieznany operator!");
+        operator = prompt("Podaj operator arytmetyczny (+, -, *, /, %):", "");
+    }
+  }
